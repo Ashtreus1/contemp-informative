@@ -1,7 +1,7 @@
 import React from "react";
 export default function Header() {
 	return (
-		<div className="transparent px-4 py-6 flex justify-between px-16 absolute top-0 w-full">
+		<div className="transparent px-16 py-6 flex justify-between absolute top-0 w-full uppercase">
 			<div className="flex items-center">
 				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -15,10 +15,10 @@ export default function Header() {
 			</div>
 			<div className="flex items-center gap-8">
 				<a href="/">HOME</a>
+				<a href="/">Topics</a>
 				<a href="/">LOREM</a>
 				<a href="/">LOREM</a>
-				<a href="/">LOREM</a>
-				<a href="/">LOREM</a>
+				<a href="/">About</a>
 			</div>
 		</div>
 	);
