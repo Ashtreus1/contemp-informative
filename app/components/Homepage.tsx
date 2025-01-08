@@ -3,6 +3,7 @@
 import { useState } from "react";
 import React from "react";
 import Homepagedesc from "./HomepageLeft";
+import HomepageRight from "./HomepageRight";
 
 export default function Homepage() {
 	const [bg, setbg] = useState("app/src/assets/homepagebg.png");
@@ -13,7 +14,7 @@ export default function Homepage() {
 	return (
 		<div className="min-h-screen bg-cover bg-no-repeat bg-size-contain flex h-screen mx-auto" style={{ backgroundImage: `url(${bg})` }}>
 			<Homepagedesc title={title} desc={desc} />
-			<div className="w-2/3"></div>
+			<HomepageRight />
 		</div>
 	);
 }

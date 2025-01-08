@@ -3,7 +3,7 @@ import HomepageDesc from "./HomepageDesc";
 export default function HomepageLeft({ title, desc }: { title: string; desc: string }) {
 	return (
 		<div className="flex flex-col items-center justify-center h-full">
-			<div className="">
+			<div className="px-16">
 				<HomepageDesc title={title} desc={desc} />
 				<div className="mt-8 flex gap-4">
 					<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
