@@ -15,6 +15,8 @@ export default function Lesson4Main() {
 			<Section8 />
 			<Section9 />
 			<Section10 />
+			<Section11 />
+			<Section12 />
 		</div>
 	);
 }
@@ -185,7 +187,7 @@ function Section9() {
 function Section10() {
 	return (
 		<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#B9B4C7] snap-start pt-20">
-			<h1 className="text-center text-4xl md:text-5xl font-bold mt-16 uppercase">ERA OF BIMETALLISM</h1>
+			<h1 className="text-center text-4xl md:text-5xl font-bold mt-16 uppercase ">ERA OF BIMETALLISM</h1>
 			<div className="flex items-center pt-10">
 				<div className="w-1/2 flex items-center justify-center">
 					<img src="/lesson3_imgs/s10.png" alt="" className="w-3/4" />
@@ -196,6 +198,63 @@ function Section10() {
 						currencies were determined by their gold or silver contents. Some countries were either on a gold or a silver standard.
 					</p>
 				</article>
+			</div>
+		</section>
+	);
+}
+
+function Section11() {
+	return (
+		<section className="">
+			<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#D49B54] snap-start pt-20">
+				<h1 className="text-center text-4xl md:text-5xl text-white font-bold mt-16 uppercase ">Gold Standard</h1>
+				<div className="flex">
+					<div className="w-1/3 flex items-center justify-center">
+						<img src="/lesson3_imgs/s11.png" alt="" className="w-3/4" />
+					</div>
+					<article className="w-2/3 content-center text-2xl text-justify px-10 text-black grid gap-16">
+						<p>
+							• 1875-1914, gold alone is assured of unrestricted coinage. There was a two-way convertibility between gold and national
+							currencies at a stable ratio.
+						</p>
+						<p>• The gold standard is a monetary system in which paper money is freely convertible into a fixed amount of gold.</p>
+						<p>• U.S. dollars were convertible to gold at a rate of $20.67 per ounce.</p>
+					</article>
+				</div>
+			</section>
+			<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#D49B54] snap-start pt-20">
+				<h1 className="text-center text-4xl md:text-5xl text-white font-bold mt-16 uppercase ">Gold Standard</h1>
+				<div className="flex">
+					<div className="w-1/3 flex items-center justify-center">
+						<img src="/lesson3_imgs/s11.png" alt="" className="w-3/4" />
+					</div>
+					<article className="w-2/3 content-center text-2xl text-justify px-10 text-black grid gap-16">
+						<p className="leading-loose">
+							• ADVANTAGES: The gold standard prevents inflation as governments and banks are unable to manipulate the money supply
+							(e.g., overissuing money). The gold standard also stabilizes prices and foreign exchange rates.
+						</p>
+						<p className="leading-loose">
+							• DISADVANTAGES: Under the gold standard, the supply of gold cannot keep pace with its demand, and it is not flexible
+							under trying economic times. Also, mining gold is costly and creates negative environmental externalities.
+						</p>
+					</article>
+				</div>
+			</section>
+		</section>
+	);
+}
+
+function Section12() {
+	return (
+		<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#014DA7] snap-start pt-20">
+			<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase ">International Monetary Fund</h1>
+			<div className="flex">
+				<div className="w-1/2 flex items-center justify-center">
+					<img src="/lesson3_imgs/s12.png" alt="" className="w-3/4" />
+				</div>
+				<p className="w-1/2 content-center text-3xl text-justify px-20 text-white leading-loose">
+					International Monetary Fund (IMF) to monitor exchange rates and identify nations that needed global monetary support.
+				</p>
 			</div>
 		</section>
 	);
