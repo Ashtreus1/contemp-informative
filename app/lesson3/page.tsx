@@ -17,6 +17,11 @@ export default function Lesson4Main() {
 			<Section10 />
 			<Section11 />
 			<Section12 />
+			<Section13 />
+			<Section14 />
+			<Section15 />
+			<Section16 />
+			<Section17 />
 		</div>
 	);
 }
@@ -166,7 +171,7 @@ function Section8() {
 function Section9() {
 	return (
 		<section className="h-screen bg-[url('/lesson3_imgs/bg-3.png')] bg-no-repeat bg-cover bg-center bg-[#31363F] snap-start pt-20">
-			<div className="flex items-center justify-center">
+			<div className="flex items-center justify-center mt-10">
 				<div className="w-1/2  flex items-center justify-end">
 					<div className="w-4/5">
 						<img src="/lesson3_imgs/s9.png" className="" alt="" />
@@ -255,6 +260,126 @@ function Section12() {
 				<p className="w-1/2 content-center text-3xl text-justify px-20 text-white leading-loose">
 					International Monetary Fund (IMF) to monitor exchange rates and identify nations that needed global monetary support.
 				</p>
+			</div>
+		</section>
+	);
+}
+
+function Section13() {
+	return (
+		<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#503C3C] snap-start pt-20">
+			<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase ">Bretton Woods System</h1>
+			<div className="flex">
+				<div className="w-1/3 flex items-center justify-center">
+					<img src="/lesson3_imgs/s13.png" alt="" className="w-3/4" />
+				</div>
+				<article className="w-2/3 content-center text-2xl text-justify px-10 text-white grid gap-14">
+					<p>
+						• The Bretton Woods Agreement was negotiated in July 1944 by delegates from 44 countries at the United Nations Monetary and
+						Financial Conference held in Bretton Woods, New Hampshire.
+					</p>
+					<p>• gold was the basis for the U.S. dollar and other currencies were pegged to the U.S. dollar’s value.</p>
+					<p>
+						• goals of creating an efficient foreign exchange system, preventing competitive devaluations of currencies, and promoting
+						international economic growth.
+					</p>
+					<p>• $35 per ounce</p>
+				</article>
+			</div>
+		</section>
+	);
+}
+
+function Section14() {
+	return (
+		<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#697565] snap-start pt-20 text-white flex flex-col justify-center items-center">
+			<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-5 uppercase ">President Herbert Hoover (1933)</h1>
+			<div className="flex items-center justify-center">
+				<img src="/lesson3_imgs/s14.png" alt="" className="w-3/4 center" />
+			</div>
+			<p className="text-2xl text-justify px-10 leading-[2.5]">“We have gold because we cannot trust governments,”</p>
+		</section>
+	);
+}
+
+function Section15() {
+	return (
+		<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#1F6E8C] snap-start pt-20">
+			<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase ">WORLD BANK</h1>
+			<div className="flex">
+				<div className="w-1/2 flex items-center justify-center">
+					<img src="/lesson3_imgs/s15.png" alt="" className="w-3/4" />
+				</div>
+				<p className="w-1/2 content-center text-3xl text-justify px-20 text-white leading-loose">
+					World Bank to manage funds available for providing assistance to countries that had been physically and financially devastated by
+					World War II.
+				</p>
+			</div>
+		</section>
+	);
+}
+
+function Section16() {
+	return (
+		<section>
+			<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#3D3D42] snap-start pt-20">
+				<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase ">FIAT MONETARY SYSTEM</h1>
+				<div className="flex">
+					<div className="w-1/2 flex items-center justify-center">
+						<img src="/lesson3_imgs/s16.png" alt="" className="w-3/5" />
+					</div>
+					<article className="w-1/2 content-center text-2xl text-justify px-10 text-white leading-loose">
+						<p>•”fiat” is a Latin word that is often translated as “it shall be” or “let it be done.”</p>
+						<p>
+							• Fiat money is a government-issued currency that is not backed by a physical commodity, such as gold or silver, but
+							rather by the government that issued it.
+						</p>
+						<p>
+							• The value of fiat money is derived from the relationship between supply and demand and the stability of the issuing
+							government.
+						</p>
+					</article>
+				</div>
+			</section>
+			<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#3D3D42] snap-start pt-20">
+				<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase ">FIAT MONETARY SYSTEM</h1>
+				<div className="flex">
+					<div className="w-1/2 flex items-center justify-center">
+						<img src="/lesson3_imgs/s16.png" alt="" className="w-4/6" />
+					</div>
+					<article className="w-1/2 content-center text-2xl text-justify px-10 text-white leading-loose">
+						<div className="mb-10">
+							<h2 className="font-semibold">ADVANTAGES OF FIAT MONEY</h2>
+							<p>• Gives central banks greater control over the economy</p>
+							<p>• Is cost-efficient to produce</p>
+							<p>•Provides governments with flexibility</p>
+						</div>
+						<div>
+							<h2 className="font-semibold">DISADVANTAGES OF FIAT MONEY</h2>
+							<p>• Is not a fool-proof way to protect the economy</p>
+							<p>• Creates opportunity for a bubble</p>
+							<p>• Provides risk of inflation</p>
+						</div>
+					</article>
+				</div>
+			</section>
+		</section>
+	);
+}
+
+function Section17() {
+	return (
+		<section className="h-screen bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#7E6363] snap-start pt-20">
+			<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase ">Floating Rate System</h1>
+			<div className="flex justify-center">
+				<img src="/lesson3_imgs/s17.png" alt="" className="w-2/6" />
+				<article className="w-1/2 content-center text-2xl text-justify px-10 text-white leading-loose grid gap-y-10">
+					<p>
+						• A floating exchange rate is a regime where the currency price of a nation is set by the forex market based on supply and
+						demand relative to other currencies.
+					</p>
+					<p>•Floating exchange rates became more popular after the failure of the gold standard and the Bretton Woods agreement.</p>
+				</article>
 			</div>
 		</section>
 	);
