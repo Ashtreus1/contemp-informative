@@ -17,14 +17,14 @@ export default function HomepageHero() {
 	);
 
 	return (
-		<div className="min-h-screen flex flex-col lg:flex-row items-center justify-between p-6 lg:gap-12">
+		<div className="min-h-screen flex items-center justify-between p-6">
 			
-			<div className="flex flex-col items-start justify-center w-full lg:w-[500px] text-center lg:text-left">
+			<div className="flex flex-col items-start justify-center w-1/2">
 				<h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
 				<p className="mt-4 text-lg md:text-xl">{desc}</p>
 
 				<div className="mt-8 flex gap-4">
-					<Button size="icon" className="flex items-center justify-center w-16 h-16 rounded-full border border-white bg-transparent">
+					<Button size="icon" className="flex items-center justify-center w-24 h-12 rounded-full border border-white bg-transparent">
 						<Bookmark size={64}/>
 					</Button>
 					<Button
@@ -36,9 +36,13 @@ export default function HomepageHero() {
 				</div>
 			</div>
 
-			<div className="flex justify-center lg:justify-end w-full lg:w-auto mt-12 lg:mt-0">
-				<HomepageCarousel slides={SLIDES} options={OPTIONS} />
-			</div>
 		</div>
 	);
 }
+
+/**
+ * 
+			<div className="flex items-center justify-center w-1/2">
+				<HomepageCard cardImg="/card1.png" />
+			</div>
+ */
