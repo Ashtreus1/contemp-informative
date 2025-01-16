@@ -1,9 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import HomepageCard from "./HomepageCard";
 import { Button } from "@/components/ui/button";
 import { Bookmark } from "lucide-react";
+import { EmblaOptionsType } from "embla-carousel";
+import HomepageCarousel from "./HomepageCarousel";
+
+const OPTIONS: EmblaOptionsType = { align: 'start', loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function HomepageHero() {
 	const [title, setTitle] = useState("What is Globalization");
@@ -12,32 +17,28 @@ export default function HomepageHero() {
 	);
 
 	return (
-		<div className="min-h-screen flex items-center justify-between p-6">
+		<div className="min-h-screen flex flex-col lg:flex-row items-center justify-between p-6 lg:gap-12">
 			
-			<div className="flex flex-col items-start justify-center w-1/2">
+			<div className="flex flex-col items-start justify-center w-full lg:w-[500px] text-center lg:text-left">
 				<h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
 				<p className="mt-4 text-lg md:text-xl">{desc}</p>
 
 				<div className="mt-8 flex gap-4">
-					<Button size="icon" className="flex items-center justify-center w-24 h-12 rounded-full border border-white bg-transparent">
+					<Button size="icon" className="flex items-center justify-center w-16 h-16 rounded-full border border-white bg-transparent">
 						<Bookmark size={64}/>
 					</Button>
 					<Button
 						size="lg"
-						className="flex items-center justify-center w-64 h-12 text-gray-200 bg-transparent border border-white rounded-full hover:bg-gray-200 hover:text-[#1e1e1e] transition-colors"
+						className="flex items-center justify-center w-64 h-16 text-gray-200 bg-transparent border border-white rounded-full hover:bg-gray-200 hover:text-[#1e1e1e] transition-colors"
 					>
 						<span>Learn More</span>
 					</Button>
 				</div>
 			</div>
 
+			<div className="flex justify-center lg:justify-end w-full lg:w-auto mt-12 lg:mt-0">
+				<HomepageCarousel slides={SLIDES} options={OPTIONS} />
+			</div>
 		</div>
 	);
 }
-
-/**
- * 
-			<div className="flex items-center justify-center w-1/2">
-				<HomepageCard cardImg="/card1.png" />
-			</div>
- */
