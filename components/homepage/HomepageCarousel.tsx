@@ -29,7 +29,7 @@ export default function HomepageCarousel(props: PropType) {
     }, [emblaApi, props.onSlideChange]);
 
     return (
-        <div className="w-full max-w-2xl mx-auto">
+        <div className="relative w-full max-w-2xl mx-auto">
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex space-x-10">
                     {slides.map((index) => (
