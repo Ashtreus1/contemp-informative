@@ -9,7 +9,7 @@ const navItem = [
 export default function Header() {
 	return (
 		// <div className="transparent px-16 py-6 flex justify-between absolute top-0 w-full uppercase">
-		<div className="transparent px-16 py-6 flex justify-between fixed top-0 w-full uppercase z-50">
+		<div className="transparent px-2 py-4 md:px-16 flex justify-between fixed top-0 w-full uppercase z-50">
 			<div className="flex items-center">
 				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -19,9 +19,9 @@ export default function Header() {
 						fill="white"
 					/>
 				</svg>
-				<h1 className="text-xl text-white px-6 tracking-widest text-uppercase">Contemporary World</h1>
+				<h1 className="text-lg sm:text-xl md:text-2xl px-2 sm:px-6 text-white font-semibold text-uppercase">Contemporary World</h1>
 			</div>
-			<div className="flex items-center gap-8">
+			<div className="flex items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8">
 				{navItem.map((item, index) => (
 					<Link key={index} href={item.url} className="hover:text-cyan-400 transition-colors">
 						<span>{item.title}</span>

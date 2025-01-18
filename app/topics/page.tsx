@@ -10,10 +10,10 @@ export default function Topics() {
 	];
 
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center">
+		<div className="min-h-screen items-center justify-center pt-20">
 			<Header />
 			<h1 className="text-4xl md:text-5xl font-bold text-center">Topics</h1>
-			<div className="flex gap-20 items-center justify-center mt-20 hover:cursor-pointer font-semibold text-xl">
+			<div className="flex gap-20 flex-col md:flex-row items-center justify-center mt-20 hover:cursor-pointer font-semibold text-xl">
 				{topics.map((topic) => (
 					<div key={topic.title} className=" hover:text-cyan-400 transition-colors">
 						<Link href={topic.url}>{topic.title}</Link>

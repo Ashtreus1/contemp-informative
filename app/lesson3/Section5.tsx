@@ -18,12 +18,11 @@ export default function Section5() {
 	];
 
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] bg-no-repeat bg-cover bg-center flex snap-start pt-20 bg-cyan-800">
-			<div className=""></div>
-			<h1 className="text-center text-4xl md:text-5xl font-bold text-white mt-10 uppercase flex items-center justify-center px-20">
+		<section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col-reverse lg:flex-row items-center justify-center bg-no-repeat bg-cover bg-center snap-start sm:pt-20 bg-cyan-800">
+			<h1 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-white uppercase flex items-center justify-center sm:px-10 md:px-2">
 				GLOBALISASYON VS INTERNALISASYON
 			</h1>
-			<div className="flex items-center justify-center">
+			<div className="h-auto sm:h-3/5 lg:h-4/5 grid grid-cols-2 sm:flex sm:items-center sm:justify-center">
 				{cards.map((card) => (
 					<Section5Card key={card.title} articleImg={card.img} article={card.article} title={card.title} />
 				))}
@@ -32,18 +31,21 @@ export default function Section5() {
 	);
 
 	function Section5Card({ articleImg, article, title }: { articleImg: string; article: string; title: string }) {
+		const styleTitle = title === "Internationalization" ? "col-span-2" : "";
 		return (
-			<div className="w-1/3 h-full flex flex-col items-center space-y-4 p-2">
-				<div>
-					<img src={articleImg} width={500} height={500} alt={articleImg} />
+			<div className={`sm:h-full sm:w-1/3 items-center flex flex-col sm:space-y-4 p-2 ${styleTitle}`}>
+				<div className={`w-1/2 sm:w-2/3`}>
+					<img src={articleImg} alt={articleImg} />
 				</div>
-				<article className="border border-white p-2 h-1/3 ">
+				<article className="border border-white p-2 h-2/3 lg:h-1/3 xl:h-2/4 w-full">
 					{title !== "Internationalization" ? (
-						<h2 className="uppercase text-center text-2xl font-bold">{title}</h2>
+						<h2 className="uppercase text-center text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">{title}</h2>
 					) : (
-						<h2 className="uppercase text-center text-xl font-bold">{title}</h2>
+						<h2 className="uppercase text-center break-words text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">
+							{title}
+						</h2>
 					)}
-					<p className="text-center text-justify pt-2">{article}</p>
+					<p className="text-center text-justify text-sm sm:text-base xl:text-lg 2xl:text-xl pt-2">{article}</p>
 				</article>
 			</div>
 		);
