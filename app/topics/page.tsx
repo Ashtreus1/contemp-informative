@@ -3,7 +3,7 @@ import Header from "@/components/homepage/Header";
 export default function Topics() {
 	const topics = [
 		{ title: "Globalisasyon", url: "/lesson1" },
-		{ title: "State", url: "/Lesson2" },
+		{ title: "State", url: "/lesson2" },
 		{ title: "Pandaigdigang Ekonomiya ", url: "/lesson3" },
 		{ title: "Market Integration", url: "/lesson4" },
 		{ title: "SDG Goals", url: "/lesson5" },
