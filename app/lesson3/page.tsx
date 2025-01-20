@@ -12,6 +12,7 @@ export default function Lesson4Main() {
 						[&::-webkit-scrollbar-track]:bg-gray-600
 						[&::-webkit-scrollbar-thumb]:bg-gray-300"
 		>
+		<div className="h-screen overflow-y-scroll snap-y snap-mandatory">
 			<Header />
 			<Section1 />
 			<Section2 />
