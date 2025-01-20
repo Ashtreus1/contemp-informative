@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Section } from "./page";
-import { TextStyle, HeaderStyle, center } from "./page";
-import { LeftAnim, RightAnim, TopAnim, BottomAnim } from "@/components/anim/Animation";
+import Section  from "./Section";
+import { TextStyle, HeaderStyle, center } from "./constant";
+import { LeftAnim } from "@/components/anim/Animation";
 
 const BackButtonStyle = "text-lg w-full sm:w-1/6 sm:h-16 bg-gray-300 hover:bg-gray-400 text-black font-semibold ";
 
@@ -18,9 +18,11 @@ export default function Section2() {
 					<h1 className={`w-full  ${HeaderStyle}`}>State</h1>
 					<div className="w-full">
 						<p className="italic sm:w-3/4">
+							{`
 							A state is a political entity with a centralized government that holds the authority to govern a specific geographical
 							area. It possesses sovereignty over its territory and is recognized as such by other states. This recognition can be
 							bilateral or multilateral, depending on the state's international relationships.
+							`}
 						</p>
 					</div>
 					<motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.1 }} className="w-full flex items-center justify-center pt-10">
@@ -102,8 +104,10 @@ function People({ setShowState }: { setShowState: (state: boolean) => void }) {
 					<div className={containerStyle}>
 						<h1 className={HeaderStyle}>People</h1>
 						<p>
+							{`
 							The population residing within the state's boundaries. This includes citizens and residents, whose rights and duties are
 							defined by the state.
+							`}
 						</p>
 					</div>
 					<div className={`${containerStyle}`}>
@@ -143,8 +147,10 @@ function Territory({ setShowState }: { setShowState: (state: boolean) => void })
 					<div className={containerStyle}>
 						<h1 className={`${customHeaderStyle}`}>Territory</h1>
 						<p>
+							{`
 							The defined geographical areha under the jurisdiction of the state. This includes land, water, and airspace, which are
 							critical for the state's security and resources.
+							`}
 						</p>
 					</div>
 					<div className={containerStyle}>

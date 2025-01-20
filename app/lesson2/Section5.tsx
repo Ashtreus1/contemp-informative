@@ -1,6 +1,5 @@
 "use client";
-import { title } from "process";
-import { Section } from "./page";
+import Section  from "./Section";
 import { LeftAnim } from "@/components/anim/Animation";
 
 export const TextStyle = "text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl";

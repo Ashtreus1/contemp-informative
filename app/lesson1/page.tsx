@@ -124,12 +124,14 @@ function Section3() {
                     translateX: textSlide,
                 }}
             >
-                According to WHO, globalization can be defined as "the increased
+                {`
+                    According to WHO, globalization can be defined as "the increased
                 interconnectedness and interdependence of people and countries". It is
                 generally understood to include two inter-related elements: the opening of
                 international borders to increasingly fast flows of goods, services,
                 finance, people and ideas; and the changes in institutions and policies
                 at national and international levels that facilitate or promote such flows.
+                `}
             </motion.p>
 
             <motion.div
@@ -167,12 +169,14 @@ function Section3() {
                 className="rounded-lg h-[300px] w-[300px]"
             />
             <p className="text-white text-md font-semibold mx-12">
+                {`
                 According to WHO, globalization can be defined as "the increased
                 interconnectedness and interdependence of people and countries". It is
                 generally understood to include two inter-related elements: the opening of
                 international borders to increasingly fast flows of goods, services,
                 finance, people and ideas; and the changes in institutions and policies
                 at national and international levels that facilitate or promote such flows.
+                `}
             </p>
             <motion.div
                 className="absolute bottom-0 left-0 h-[10px] bg-[#e8d9cd]"

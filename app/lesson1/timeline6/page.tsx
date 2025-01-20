@@ -25,10 +25,12 @@ export default function Timeline3() {
                 <div className="w-full lg:w-1/2 flex flex-col items-center justify-start h-full p-5 mr-10 overflow-y-auto">
                     <div className="max-w-[90%] mx-auto text-[#223030]">
                         <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed">
+                            {`
                             Global trade began in earnest during the "Age of Discovery"
                             when European merchants began seeking out new avenues for
                             trade. The Americas were "discovered" during this time,
                             and they opened the door for additional trade.
+                            `}
                         </p>
                         <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed mt-4">
                             Previously unavailable goods like potatoes, tomatoes,
@@ -42,9 +44,11 @@ export default function Timeline3() {
                             the time furthered a trade in knowledge as well as goods.
                         </p>
                         <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed mt-4">
+                            {`
                             During the so-called "Scientific Revolution" major strides were
                             made in the fields of mechanics, astronomy, and shipping, and this
                             information followed trade routes to spread throughout the world.
+                            `}
                         </p>
                         <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed mt-4">
                             While trade routes during this time connected continents, the 

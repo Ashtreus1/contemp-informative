@@ -11,10 +11,14 @@ const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function HomepageHero() {
-	const [title, setTitle] = useState("What is Globalization");
-	const [desc, setDesc] = useState(
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus euismod mi, nec ullamcorper nunc gravida in. Fusce vitae tincidunt nulla. Phasellus malesuada, quam ac dictum euismod, dui sapien cursus ipsum, eu imperdiet enim ante vel erat."
-	);
+	// const [title, setTitle] = useState("What is Globalization");
+	// const [desc, setDesc] = useState(
+	// 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus euismod mi, nec ullamcorper nunc gravida in. Fusce vitae tincidunt nulla. Phasellus malesuada, quam ac dictum euismod, dui sapien cursus ipsum, eu imperdiet enim ante vel erat."
+	// );
+
+	const title = "What is Globalization";
+	const desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus euismod mi, nec ullamcorper nunc gravida in. Fusce vitae tincidunt nulla. Phasellus malesuada, quam ac dictum euismod, dui sapien cursus ipsum, eu imperdiet enim ante vel erat";
+
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const handleSlideChange = (index: number) => {

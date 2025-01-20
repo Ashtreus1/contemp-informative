@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Section } from "./page";
-import { TextStyle, HeaderStyle, center } from "./page";
-import { LeftAnim, RightAnim, TopAnim, BottomAnim } from "@/components/anim/Animation";
+import Section  from "./Section";
+import { TextStyle, HeaderStyle, center } from "./constant";
+import { BottomAnim } from "@/components/anim/Animation";
 
 const BACKBUTTON = "w-full sm:w-1/6 h-10 sm:h-16 bg-gray-300 hover:bg-gray-400 text-black font-semibold";
 

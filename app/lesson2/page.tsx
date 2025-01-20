@@ -1,15 +1,14 @@
 "use client";
 import Header from "@/components/homepage/Header";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Section from './Section';
 import Section2 from "./Section2";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
-import { LeftAnim, RightAnim, TopAnim, BottomAnim } from "@/components/anim/Animation";
+import { LeftAnim, RightAnim, TopAnim } from "@/components/anim/Animation";
+import { HeaderStyle, center } from "./constant";
 
-export const TextStyle = "text-gray-300 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl";
-export const HeaderStyle = `text-gray-300 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl `;
-export const center = "flex flex-col justify-center items-center";
 
 export default function Lesson2() {
 	return (
@@ -31,13 +30,6 @@ export default function Lesson2() {
 	);
 }
 
-export function Section({ className = "", children }: any) {
-	return (
-		<section className={`h-screen w-full bg-cover bg-center snap-start transition-all duration-1000 ${TextStyle} ${center} ${className}`}>
-			{children}
-		</section>
-	);
-}
 
 function Section1() {
 	return (

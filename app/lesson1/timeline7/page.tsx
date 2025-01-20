@@ -57,9 +57,11 @@ export default function Timeline4() {
                             these areas.
                         </p>
                         <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed mt-4">
+                            {`
                             In 2001, China joined the WTO and becames the world's primary
                             manufacturer. The rise of the internet around the turn of the
                             century helped to streamline global trade networks.
+                            `}
                         </p>
                         <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed mt-4">
                             With this new technology, businesses could conduct research in
