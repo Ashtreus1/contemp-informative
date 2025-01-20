@@ -2,7 +2,7 @@
 import { style } from "framer-motion/client";
 import Header from "../../components/homepage/Header";
 import Section5 from "./Section5";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Lesson4Main() {
 	return (
@@ -30,6 +30,9 @@ export default function Lesson4Main() {
 			<Section15 />
 			<Section16 />
 			<Section17 />
+			{/* <div className="snap-start">
+				<Footer />
+			</div> */}
 		</div>
 	);
 }
