@@ -3,7 +3,7 @@ import Section5 from "./Section5";
 
 export default function Lesson4Main() {
 	return (
-		<div className="h-screen overflow-y-scroll snap-y snap-mandatory ">
+		<div className="h-screen overflow-y-scroll snap-y snap-mandatory">
 			<Header />
 			<Section1 />
 			<Section2 />
