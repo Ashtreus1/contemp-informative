@@ -60,12 +60,10 @@ export default function HomepageCarousel(props: PropType) {
 			</div>
 
 			<div className="flex justify-between items-center mt-4">
-				<div className="flex space-x-2">
+				<div className="flex space-x-5 gap-5">
 					<PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
 					<NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-				</div>
-
-				<div className="flex space-x-2">
+					<div className="flex items-center gap-2">
 					{scrollSnaps.map((_, index) => (
 						<DotButton
 							key={index}
@@ -73,7 +71,9 @@ export default function HomepageCarousel(props: PropType) {
 							className={`w-3 h-3 rounded-full ${selectedIndex === index ? "bg-gray-700" : "bg-gray-300"}`}
 						/>
 					))}
+					</div>
 				</div>
+
 			</div>
 		</div>
 	) : (
@@ -90,7 +90,7 @@ export default function HomepageCarousel(props: PropType) {
 									alt={`Slide ${index + 1}`}
 									width={300}
 									height={400}
-									className="cursor-pointer h-[400px] w-[400px] sm:w-[300px] sm:h-[300px]"
+									className="cursor-pointer h-[200px] w-[200px] sm:w-[100px] sm:h-[100px]"
 								/>
 						</div>
 					))}

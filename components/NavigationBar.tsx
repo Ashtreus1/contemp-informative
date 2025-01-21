@@ -122,13 +122,13 @@ export default function Header() {
           </button>
 
           <div className="flex-grow flex flex-col items-center justify-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Topics</h2>
+            <h2 className="text-4xl font-bold text-white font-fjalla mb-6">Topics</h2>
             <div className="w-full flex flex-col max-w-2xl px-6 space-y-6">
               {topics.map((topic, index) => (
                 <Link href={topic.url} key={index} onClick={closeModal}>
                   <p
                     key={index}
-                    className="bg-gray-800 p-4 rounded-lg text-white text-center shadow-md hover:bg-cyan-400 hover:text-black transition"
+                    className="bg-[#1e1e1e] p-4 border border-white rounded-lg text-white text-center shadow-md hover:bg-cyan-400 hover:text-black transition"
                   >
                     {topic.title}
                   </p>
