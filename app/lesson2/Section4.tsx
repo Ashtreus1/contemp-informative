@@ -20,7 +20,7 @@ export default function Section4() {
 	return (
 		<Section className="bg-[url(/lesson2_imgs/s4-bg-1.png)] relative">
 			<div className="absolute inset-0 bg-black bg-opacity-50" />
-			<BottomAnim values="100" duration={1.2} className="w-full h-full px-6 sm:px-20">
+			<BottomAnim values="60" duration={1.2} className="w-full h-full px-6 sm:px-20">
 				<div className={`h-4/6 flex flex-col items-center justify-center relative`}>
 					<h1 className={`${HeaderStyle} w-full`}>Sovereignty</h1>
 					<p className={`${center}`}>

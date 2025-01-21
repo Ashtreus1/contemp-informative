@@ -1,5 +1,5 @@
 "use client";
-import { title } from "process";
+import React from "react";
 import { Section } from "./page";
 import { LeftAnim } from "@/components/anim/Animation";
 
@@ -61,7 +61,7 @@ const DATA = [
 function Content({ title, article }: { title: string; article: string }) {
 	return (
 		<LeftAnim values="100" duration={1.2}>
-			<div className="flex flex-col gap-5">
+			<div className="flex flex-col gap-5 ">
 				<h1 className={`${HeaderStyle}`}>{title}</h1>
 				<p className={`${TextStyle}`}>{article}</p>
 			</div>
@@ -72,13 +72,14 @@ function Content({ title, article }: { title: string; article: string }) {
 export default function Section5() {
 	return (
 		<div>
-			<Section className="bg-[url(/lesson2_imgs/s5-bg.png)] relative">
+			<Section className="bg-slate-900 relative">
 				<div
 					className="overflow-y-scroll bg-slate-900 py-5 px-5 sm:px-20 sm:p-10 sm:pt-20 flex flex-col gap-10
 					[&::-webkit-scrollbar]:w-2 relative
-					[&::-webkit-scrollbar-track]:bg-cyan-600
-					[&::-webkit-scrollbar-thumb]:bg-cyan-300"
+					[&::-webkit-scrollbar-track]:bg-gray-600
+					[&::-webkit-scrollbar-thumb]:bg-cyan-600"
 				>
+					{/* <div className="overflow-y-scroll relative no-scrollbar py-5 px-5 sm:px-20 sm:p-10 sm:pt-20 flex flex-col gap-10"> */}
 					{DATA.map(({ title, article }) =>
 						title.includes("Theory in International Relations") ? (
 							<LeftAnim

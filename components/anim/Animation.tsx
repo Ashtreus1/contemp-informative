@@ -1,9 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 
-export function LeftAnim({ children, values, className, duration }: any) {
+const defaultProps = {
+	children: null,
+	values: "100",
+	className: "",
+	duration: 1,
+	viewport: { amount: "all" },
+};
+
+LeftAnim.defaultProps = defaultProps;
+RightAnim.defaultProps = defaultProps;
+TopAnim.defaultProps = defaultProps;
+BottomAnim.defaultProps = defaultProps;
+
+export function LeftAnim({ children, values, className, duration, viewport }: any) {
+	values = values ? values : 100;
 	values = "-" + values + "%";
+
 	return (
 		<motion.div
 			className={className}
@@ -11,12 +25,14 @@ export function LeftAnim({ children, values, className, duration }: any) {
 			whileInView={{ x: 0, opacity: 1 }}
 			exit={{ x: values, opacity: 0 }}
 			transition={{ duration: duration }}
+			viewport={viewport}
 		>
 			{children}
 		</motion.div>
 	);
 }
-export function RightAnim({ children, values, className, duration }: any) {
+export function RightAnim({ children, values, className, duration, viewport }: any) {
+	values = values ? values : 100;
 	values = values + "%";
 	return (
 		<motion.div
@@ -25,13 +41,15 @@ export function RightAnim({ children, values, className, duration }: any) {
 			whileInView={{ x: 0, opacity: 1 }}
 			exit={{ x: values, opacity: 0 }}
 			transition={{ duration: duration }}
+			viewport={viewport}
 		>
 			{children}
 		</motion.div>
 	);
 }
 
-export function TopAnim({ children, values, className, duration }: any) {
+export function TopAnim({ children, values, className, duration, viewport }: any) {
+	values = values ? values : 100;
 	values = "-" + values + "%";
 	return (
 		<motion.div
@@ -40,13 +58,15 @@ export function TopAnim({ children, values, className, duration }: any) {
 			whileInView={{ y: 0, opacity: 1 }}
 			exit={{ y: values, opacity: 0 }}
 			transition={{ duration: duration }}
+			viewport={viewport}
 		>
 			{children}
 		</motion.div>
 	);
 }
 
-export function BottomAnim({ children, values, className, duration }: any) {
+export function BottomAnim({ children, values, className, duration, viewport }: any) {
+	values = values ? values : 100;
 	values = values + "%";
 	return (
 		<motion.div
@@ -55,60 +75,9 @@ export function BottomAnim({ children, values, className, duration }: any) {
 			whileInView={{ y: 0, opacity: 1 }}
 			exit={{ y: values, opacity: 0 }}
 			transition={{ duration: duration }}
+			viewport={viewport}
 		>
 			{children}
 		</motion.div>
 	);
 }
-
-LeftAnim.prptypes = {
-	children: PropTypes.node,
-	values: PropTypes.string,
-	className: PropTypes.string,
-	duration: PropTypes.number,
-};
-LeftAnim.defaultProps = {
-	children: null,
-	values: "100",
-	className: "",
-	duration: 1,
-};
-
-RightAnim.prptypes = {
-	children: PropTypes.node,
-	className: PropTypes.string,
-	values: PropTypes.string,
-	duration: PropTypes.number,
-};
-RightAnim.defaultProps = {
-	children: null,
-	className: "",
-	values: "100",
-	duration: 1,
-};
-
-TopAnim.prptypes = {
-	children: PropTypes.node.isRequired,
-	className: PropTypes.string,
-	values: PropTypes.string,
-	delay: PropTypes.number,
-};
-TopAnim.defaultProps = {
-	children: null,
-	className: "",
-	values: "100",
-	duration: 1,
-};
-
-BottomAnim.prptypes = {
-	children: PropTypes.node,
-	className: PropTypes.string,
-	values: PropTypes.string,
-	duration: PropTypes.number,
-};
-BottomAnim.defaultProps = {
-	children: null,
-	className: "",
-	values: "100",
-	duration: 1,
-};

@@ -7,8 +7,8 @@ import Section4 from "./Section4";
 import Section5 from "./Section5";
 import { LeftAnim, RightAnim, TopAnim, BottomAnim } from "@/components/anim/Animation";
 
-export const TextStyle = "text-gray-300 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl";
-export const HeaderStyle = `text-gray-300 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl `;
+export const TextStyle = "text-gray-300 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-mono";
+export const HeaderStyle = `text-gray-300 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono `;
 export const center = "flex flex-col justify-center items-center";
 
 export default function Lesson2() {
@@ -86,7 +86,7 @@ function Section1() {
 }
 
 function Section3() {
-	const container = "w-full md:w-1/2 sm:h-5/7 lg:h-[450px] p-10 rounded-3xl relative";
+	const container = "w-full md:w-1/2 sm:h-5/7 lg:h-[500px] p-10 rounded-3xl relative";
 	return (
 		<Section className="bg-[url(/lesson2_imgs/s3-bg.png)] relative py-20 gap-10 px-10 bg-contain bg-center flex flex-col sm:flex-row">
 			<div className="absolute inset-0 bg-black bg-opacity-50" />
