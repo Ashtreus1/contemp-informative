@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import Header from "@/components/homepage/Header";
 import Lesson1FirstCarousel from "@/components/lesson1/Lesson1FirstCarousel";
 import Lesson1SecondCarousel from "@/components/lesson1/Lesson1SecondCarousel";
 import { EmblaOptionsType } from "embla-carousel";
@@ -18,13 +17,12 @@ const SLIDES1 = Array.from(Array(SLIDE_COUNT1).keys());
 export default function Globalization() {
     return (
         <>
-            <Header bgColor="#223030" />
             <Section1 />
             <Section2 />
             <Section3 />
             <Section4 />
             <Section5 />
-        </>
+       </> 
     );
 }
 
@@ -37,10 +35,10 @@ function Section1() {
 
     return (
         <div
-            className="bg-[#223030] flex flex-col items-center justify-center h-screen w-full relative"
+            className="bg-[#223030] min-h-screen flex flex-col items-center justify-center overflow-hidden relative"
         >
             <motion.div
-                className="text-center font-bold font-fjalla uppercase tracking-widest z-10"
+                className="text-center font-bold font-fjalla uppercase"
                 style={{ opacity: h1Opacity }}
             >
                 <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white">

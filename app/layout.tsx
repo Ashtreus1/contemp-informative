@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavigationBar from "@/components/NavigationBar";
 
 export const metadata: Metadata = {
   title: "Contemp Informative",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body
         className="bg-[#1e1e1e] text-gray-200"
       >
+        <NavigationBar/>
         {children}
       </body>
     </html>

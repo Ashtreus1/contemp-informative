@@ -1,6 +1,5 @@
 "use client";
 import { motion, useScroll, useSpring } from "framer-motion";
-import Header from "@/components/homepage/Header";
 
 export default function Lesson5() {
 	const { scrollYProgress } = useScroll();
@@ -12,7 +11,6 @@ export default function Lesson5() {
 
 	return (
 		<div>
-			<Header />
 			<motion.div
 				style={{
 					scaleX,

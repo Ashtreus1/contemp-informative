@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { DotButton, useDotButton } from "@/components/homepage/CarouselNavigation";
-import { PrevButton, NextButton, usePrevNextButtons } from "@/components/homepage/CarouselButton";
+import { DotButton, useDotButton } from "@/components/CarouselNavigation";
+import { PrevButton, NextButton, usePrevNextButtons } from "@/components/CarouselButton";
 
 interface SlideContent {
     image: string;

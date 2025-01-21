@@ -1,6 +1,5 @@
 "use client";
 
-import Header from '@/components/homepage/Header';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -11,7 +10,6 @@ export default function Timeline3() {
 
     return (
         <>
-            <Header bgColor="#223030" />
             <div className="bg-[#e8d9cd] flex flex-col lg:flex-row w-screen h-screen mt-20"> {/* Added mt-20 to add space for the header */}
                 <div className="w-full lg:w-1/2 lg:h-full md:h-80 sm:h-64 flex items-center justify-center lg:p-4">
                     <Image

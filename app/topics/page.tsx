@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Header from "@/components/homepage/Header";
+import Header from "@/components/NavigationBar";
 export default function Topics() {
 	const topics = [
 		{ title: "Globalisasyon", url: "/lesson1" },

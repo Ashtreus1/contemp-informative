@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/homepage/Header";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Section from './Section';
@@ -18,7 +17,6 @@ export default function Lesson2() {
 						[&::-webkit-scrollbar-track]:bg-gray-600
 						[&::-webkit-scrollbar-thumb]:bg-gray-300"
 		>
-			<Header />
 			<div>
 				<Section1 />
 				<Section2 />

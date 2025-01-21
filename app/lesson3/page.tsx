@@ -1,5 +1,4 @@
 "use client";
-import Header from "../../components/homepage/Header";
 import Section5 from "./Section5";
 import { motion } from "framer-motion";
 
@@ -12,7 +11,6 @@ export default function Lesson4Main() {
 						[&::-webkit-scrollbar-thumb]:bg-gray-300"
 		>
 			<div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-				<Header />
 				<Section1 />
 				<Section2 />
 				<Section3 />
