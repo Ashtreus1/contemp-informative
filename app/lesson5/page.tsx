@@ -5,10 +5,10 @@ import Header from "@/components/homepage/Header";
 
 export const textStyle = "w-full text-base md:text-lg lg:text-xl";
 export const titleStyle = "w-full font-fjalla font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl";
-const articleStyle = "w-full md:w-1/2 flex flex-col justify-center p-10 sm:p-20 text-left font-mont gap-5 text-white";
-const imgContainerStyle = "w-full md:w-1/2 flex justify-center items-center";
+const articleStyle = "w-full lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 text-left font-mont gap-5 text-white";
+const imgContainerStyle = "w-full lg:w-1/2 flex justify-center items-center";
 const imgStyle = "w-4/6 sm:5/6";
-const sectionContainerStyle = "h-screen flex items-center justify-center flex-col md:flex-row gap-4 md:gap-8";
+const sectionContainerStyle = "h-screen flex items-center justify-center flex-col lg:flex-row gap-4 md:gap-8";
 const duration = 1.2;
 
 const DATASEC1 = {
@@ -158,11 +158,11 @@ export function Section({ children, className }: any) {
 
 function Section1() {
 	return (
-		<Section className="h-screen flex flex-col md:flex-row gap-4 py-20 md:gap-8 bg-[#EEEEEE]">
-			<LeftAnim className="w-full md:w-3/6 flex justify-center items-center" duration={duration}>
-				<img src="/lesson5_imgs/s5-img-1.png" alt="SDG Goals" className="w-5/6" />
+		<Section className="h-screen flex flex-col lg:flex-row gap-4 py-20 md:gap-8 bg-[#EEEEEE]">
+			<LeftAnim className="w-full lg:w-3/6 flex justify-center items-center" duration={duration}>
+				<img src="/lesson5_imgs/s5-img-1.png" alt="SDG Goals" className="w-3/6 lg:w-5/6" />
 			</LeftAnim>
-			<RightAnim className="w-full md:w-1/2 flex flex-col justify-center p-4 sm:p-20 text-left font-mont gap-5 text-black" duration={duration}>
+			<RightAnim className="w-full lg:w-1/2 flex flex-col justify-center p-4 xl:p-20 text-left font-mont gap-5 text-black" duration={duration}>
 				<h1 className={`${titleStyle}`}>{DATASEC1.title}</h1>
 				<p className={`${textStyle}`}>{DATASEC1.article}</p>
 			</RightAnim>
@@ -200,9 +200,9 @@ function Template1({ item, index }: any) {
 
 function Template2({ item, index }: any) {
 	return (
-		<Section className={`flex-col-reverse`}>
+		<Section className={`flex-col-reverse bg-[#303030] sm:bg-[#1e1e1e]`}>
 			<LeftAnim className={articleStyle} duration={duration} viewport={{ amount: "half" }}>
-				<h1 className={`${titleStyle} `}>{item.title}</h1>
+				<h1 className={`${titleStyle}`}>{item.title}</h1>
 				{item.article.map((i: any) => (
 					<p key={i} className={`${textStyle} `}>
 						{i}
