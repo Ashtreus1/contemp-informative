@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 
 type AnimationProps = {
   children: React.ReactNode;
@@ -73,34 +72,34 @@ export const BottomAnim = ({ children, values, className, duration }: AnimationP
   );
 };
 
-// PropTypes Definitions
-LeftAnim.propTypes = {
-  children: PropTypes.node.isRequired,
-  values: PropTypes.string,
-  className: PropTypes.string,
-  duration: PropTypes.number,
-};
+// // PropTypes Definitions
+// LeftAnim.propTypes = {
+//   children: PropTypes.node.isRequired,
+//   values: PropTypes.string,
+//   className: PropTypes.string,
+//   duration: PropTypes.number,
+// };
 
-RightAnim.propTypes = {
-  children: PropTypes.node.isRequired,
-  values: PropTypes.string,
-  className: PropTypes.string,
-  duration: PropTypes.number,
-};
+// RightAnim.propTypes = {
+//   children: PropTypes.node.isRequired,
+//   values: PropTypes.string,
+//   className: PropTypes.string,
+//   duration: PropTypes.number,
+// };
 
-TopAnim.propTypes = {
-  children: PropTypes.node.isRequired,
-  values: PropTypes.string,
-  className: PropTypes.string,
-  duration: PropTypes.number,
-};
+// TopAnim.propTypes = {
+//   children: PropTypes.node.isRequired,
+//   values: PropTypes.string,
+//   className: PropTypes.string,
+//   duration: PropTypes.number,
+// };
 
-BottomAnim.propTypes = {
-  children: PropTypes.node.isRequired,
-  values: PropTypes.string,
-  className: PropTypes.string,
-  duration: PropTypes.number,
-};
+// BottomAnim.propTypes = {
+//   children: PropTypes.node.isRequired,
+//   values: PropTypes.string,
+//   className: PropTypes.string,
+//   duration: PropTypes.number,
+// };
 
 // Default Props
 const defaultProps = {
