@@ -1,34 +1,43 @@
 "use client";
 import Section5 from "./Section5";
+import { BottomAnim, LeftAnim, RightAnim, TopAnim } from "@/components/anim/Animation";
 import { motion } from "framer-motion";
 
 export default function Lesson4Main() {
 	return (
 		<div
 			// className="h-screen overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory
-			className="h-screen overflow-y-auto overflow-x-hidden scroll-smooth
+			className="h-screen overflow-y-auto overflow-x-hidden scroll-smooth max-w-screen-2xl mx-auto
 						[&::-webkit-scrollbar]:w-2
 						[&::-webkit-scrollbar-track]:bg-gray-600
 						[&::-webkit-scrollbar-thumb]:bg-gray-300"
 		>
 			{/* <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory"> */}
-			<Section1 />
-			<Section2 />
-			<Section3 />
-			<Section4 />
-			<Section5 />
-			<Section6 />
-			<Section7 />
-			<Section8 />
-			<Section9 />
-			<Section10 />
-			<Section11 />
-			<Section12 />
-			<Section13 />
-			<Section14 />
-			<Section15 />
-			<Section16 />
-			<Section17 />
+			<div className="bg-[url('/lesson3_imgs/bg-1.png')] bg-fixed bg-no-repeat bg-cover bg-center">
+				<Section1 />
+				<Section2 />
+				<Section3 />
+				<Section4 />
+				<Section5 />
+			</div>
+			<div className="bg-[url('/lesson3_imgs/bg-2.png')] bg-fixed bg-no-repeat bg-cover bg-center">
+				<Section6 />
+				<Section7 />
+				<Section8 />
+			</div>
+			<div className="bg-[url('/lesson3_imgs/bg-3.png')] bg-fixed bg-no-repeat bg-cover bg-center">
+				<Section9 />
+			</div>
+			<div className="bg-[url('/lesson3_imgs/bg-4.png')] bg-fixed bg-no-repeat bg-cover bg-center">
+				<Section10 />
+				<Section11 />
+				<Section12 />
+				<Section13 />
+				<Section14 />
+				<Section15 />
+				<Section16 />
+				<Section17 />
+			</div>
 			{/* <div className="snap-start">
 				<Footer />
 			</div> */}
@@ -39,8 +48,9 @@ export default function Lesson4Main() {
 
 function Section1() {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/bg-1.png')] bg-no-repeat bg-cover bg-center pt-20 relative snap-start">
-			<div className="absolute inset-0 bg-black bg-opacity-20"></div>
+		<section className="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover bg-center sm:pt-20 relative snap-start">
+			{/* <section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/bg-1.png')] bg-no-repeat bg-cover bg-center pt-20 relative snap-start"> */}
+			<div className="absolute inset-0 bg-black bg-opacity-30"></div>
 			<div className="flex items-center justify-center relative z-10">
 				{[1, 2, 3, 4, 5].map((i) => (
 					<motion.div
@@ -55,8 +65,26 @@ function Section1() {
 					</motion.div>
 				))}
 			</div>
+			{/* <div className="grid grid-cols-2 grid-rows-3 sm:grid-cols-5 sm:grid-rows-1 gap-0 relative z-10">
+				{[1, 2, 3, 4, 5].map((i) => (
+					<div key={i} className="">
+						<img src={`/lesson3_imgs/s1-${i}.png`} alt="img" className="" />
+					</div>
+					<motion.div
+						className="flex items-center justify-center gap-0"
+						key={i}
+						initial={{ y: "-100%", opacity: 0 }}
+						whileInView={{ y: 0, opacity: 1 }}
+						exit={{ y: "-100%", opacity: 0 }}
+						transition={{ duration: 1.5, delay: i * 0.1 }}
+					>
+						<img src={`/lesson3_imgs/s1-${i}.png`} alt="img" className="" />
+					</motion.div>
+				))}
+			</div> */}
+
 			<motion.h1
-				className=" text-center text-4xl md:text-5xl font-bold text-white mt-10 uppercase relative z-10"
+				className=" text-center text-2xl md:text-4xl font-bold text-white mt-10 uppercase relative z-10"
 				initial={{ y: "50%", opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				exit={{ y: "-50%", opacity: 0 }}
@@ -70,7 +98,8 @@ function Section1() {
 
 function Section2() {
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col items-center justify-center sm:flex-row bg-no-repeat bg-cover bg-center sm:pt-20 flex relative snap-start">
+		<section className="h-screen flex flex-col items-center justify-center sm:flex-row bg-no-repeat bg-cover bg-center sm:pt-20 flex relative snap-start">
+			{/* <section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col items-center justify-center sm:flex-row bg-no-repeat bg-cover bg-center sm:pt-20 flex relative snap-start"> */}
 			<div className="absolute inset-0 bg-black bg-opacity-30"></div>
 			<div className="sm:w-1/2  relative z-10 flex items-center justify-center">
 				<motion.div
@@ -104,7 +133,8 @@ function Section2() {
 
 function Section3() {
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col sm:flex-row justify-center items-center bg-no-repeat bg-cover bg-center sm:pt-20 flex relative snap-start">
+		<section className="h-screen flex flex-col sm:flex-row justify-center items-center bg-no-repeat bg-cover bg-center sm:pt-20 flex relative snap-start">
+			{/* <section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col sm:flex-row justify-center items-center bg-no-repeat bg-cover bg-center sm:pt-20 flex relative snap-start"> */}
 			<div className="absolute inset-0 bg-black bg-opacity-30"></div>
 			<article className="sm:w-1/2 flex flex-col items-center justify-center relative z-10">
 				<motion.div className="" initial={{ x: "-100%" }} whileInView={{ x: 0 }} exit={{ x: "-100%" }} transition={{ duration: 1 }}>
@@ -128,7 +158,8 @@ function Section3() {
 
 function Section4() {
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center snap-start relative">
+		<section className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center snap-start relative">
+			{/* <section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center snap-start relative"> */}
 			<div className="absolute inset-0 bg-black bg-opacity-30"></div>
 			<motion.div
 				className="flex flex-col items-center justify-center"
@@ -152,7 +183,8 @@ function Section4() {
 
 function Section6() {
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-2.png')] bg-no-repeat bg-cover bg-center bg-[#40534C] snap-start">
+		<section className="h-screen bg-no-repeat bg-cover bg-center snap-start">
+			{/* <section className="h-screen bg-[url('/lesson3_imgs/bg-2.png')] bg-no-repeat bg-cover bg-center bg-[#40534C] snap-start"> */}
 			<motion.div
 				className="h-screen flex flex-col items-center justify-center"
 				initial={{ scale: 0 }}
@@ -176,7 +208,7 @@ function Section6() {
 
 function Section7() {
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-2.png')] flex flex-col justify-center bg-no-repeat bg-cover bg-center bg-[#49243E] snap-start">
+		<section className="h-screen  flex flex-col justify-center snap-start">
 			<motion.h1
 				className="sm:pl-20 text-center sm:text-left text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-5 sm:mt-10 uppercase"
 				initial={{ x: "-100%" }}
@@ -225,7 +257,7 @@ function Section7() {
 
 function Section8() {
 	return (
-		<section className="h-screen flex flex-col items-center justify-center bg-[url('/lesson3_imgs/bg-2.png')] bg-no-repeat bg-cover bg-center bg-[#2E236C] snap-start">
+		<section className="h-screen flex flex-col items-center justify-center snap-start">
 			<motion.h1
 				className="text-center text-xl sm:text-2xl md:text-4xl font-bold text-white uppercase lg:pt-10"
 				initial={{ y: "-50%", opacity: 0 }}
@@ -268,7 +300,7 @@ function Section8() {
 
 function Section9() {
 	return (
-		<section className="h-screen flex flex-col justify-center bg-[url('/lesson3_imgs/bg-3.png')] bg-no-repeat bg-cover bg-center bg-[#31363F] snap-start">
+		<section className="h-screen flex flex-col justify-center snap-start">
 			<div className="flex flex-col sm:flex-row items-center justify-center">
 				<motion.div
 					className="sm:w-1/2 flex items-center justify-center"
@@ -309,7 +341,7 @@ function Section9() {
 
 function Section10() {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#B9B4C7] snap-start">
+		<section className="h-screen flex flex-col justify-center items-center text-white snap-start">
 			<motion.h1
 				className="text-center text-3xl md:text-5xl font-bold uppercase "
 				initial={{ y: "-100%", opacity: 0 }}
@@ -337,7 +369,7 @@ function Section10() {
 					transition={{ duration: 1.5 }}
 				>
 					<p className="text-xl sm:text-2xl text-justify px-10 sm:px-10 sm:leading-[2.5]">
-						• before 1870, where both gold and silver coins were used as the international modes of payment. The exchange rates among
+						• Before 1870, where both gold and silver coins were used as the international modes of payment. The exchange rates among
 						currencies were determined by their gold or silver contents. Some countries were either on a gold or a silver standard.
 					</p>
 				</motion.article>
@@ -349,7 +381,7 @@ function Section10() {
 function Section11() {
 	return (
 		<section className="">
-			<section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#D49B54] snap-start">
+			<section className="h-screen flex flex-col justify-center items-center text-black snap-start">
 				<motion.h1
 					className="w-full text-center text-4xl md:text-5xl sm:pt-10 text-white font-bold uppercase sm:mb-5"
 					initial={{ y: "-100%", opacity: 0 }}
@@ -370,7 +402,7 @@ function Section11() {
 						<img src="/lesson3_imgs/s11.png" alt="" className="w-3/4" />
 					</motion.div>
 					<motion.article
-						className="sm:w-2/3 px-10 content-center text-xl sm:text-2xl text-justify text-black grid gap-10 sm:gap-16"
+						className="sm:w-2/3 px-10 content-center text-xl sm:text-2xl text-justify text-white grid gap-10 sm:gap-16"
 						initial={{ x: "100%", opacity: 0 }}
 						whileInView={{ x: 0, opacity: 1 }}
 						exit={{ x: "100%", opacity: 0 }}
@@ -385,8 +417,8 @@ function Section11() {
 					</motion.article>
 				</div>
 			</section>
-			<section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#D49B54] snap-start">
-				<motion.h1
+			<section className="h-screen flex flex-col justify-center items-center text-black snap-start">
+				{/* <motion.h1
 					className="w-full text-center text-4xl md:text-5xl sm:pt-10 text-white font-bold uppercase sm:mb-5"
 					initial={{ y: "-100%", opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
@@ -394,7 +426,7 @@ function Section11() {
 					transition={{ duration: 1.5 }}
 				>
 					Gold Standard
-				</motion.h1>
+				</motion.h1> */}
 				<div className="flex flex-col sm:flex-row items-center justify-center">
 					<motion.div
 						className="w-2/3 sm:w-1/2 flex items-center justify-center m-4"
@@ -406,7 +438,7 @@ function Section11() {
 						<img src="/lesson3_imgs/s11.png" alt="" className="w-3/4" />
 					</motion.div>
 					<motion.article
-						className="sm:w-2/3 content-center text-lg sm:text-2xl text-justify px-10 text-black grid gap:10 sm:gap-16"
+						className="sm:w-2/3 content-center text-lg sm:text-2xl text-justify px-10 text-white grid gap:10 sm:gap-16"
 						initial={{ x: "100%", opacity: 0 }}
 						whileInView={{ x: 0, opacity: 1 }}
 						exit={{ x: "100%", opacity: 0 }}
@@ -429,7 +461,7 @@ function Section11() {
 
 function Section12() {
 	return (
-		<section className="h-screen flex flex-col justify-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#014DA7] snap-start">
+		<section className="h-screen flex flex-col justify-center text-black snap-start">
 			<motion.h1
 				className="w-full text-center text-4xl md:text-5xl text-white font-bold p-5 uppercase "
 				initial={{ y: "-100%", opacity: 0 }}
@@ -465,7 +497,7 @@ function Section12() {
 
 function Section13() {
 	return (
-		<section className="h-screen flex flex-col justify-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#503C3C] snap-start">
+		<section className="h-screen flex flex-col justify-center text-black snap-start">
 			<motion.h1
 				className="text-center text-2xl lg:text-4xl md:text-5xl text-white font-bold sm:p-10 uppercase "
 				initial={{ y: "-100%", opacity: 0 }}
@@ -510,7 +542,7 @@ function Section13() {
 
 function Section14() {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#697565] snap-start text-white">
+		<section className="h-screen flex flex-col justify-center items-center text-black snap-start text-white">
 			<motion.div className="" initial={{ scale: 0 }} whileInView={{ scale: 1 }} exit={{ scale: 0 }} transition={{ duration: 1.5 }}>
 				<h1 className="text-center text-4xl md:text-5xl text-white font-bold p-5 uppercase ">President Herbert Hoover (1933)</h1>
 				<div className="flex items-center justify-center">
@@ -524,7 +556,7 @@ function Section14() {
 
 function Section15() {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#1F6E8C] snap-start">
+		<section className="h-screen flex flex-col justify-center items-center text-black snap-start">
 			<motion.h1
 				className="text-center text-4xl md:text-5xl text-white font-bold p-5 uppercase "
 				initial={{ y: "-100%", opacity: 0 }}
@@ -562,7 +594,7 @@ function Section15() {
 function Section16() {
 	return (
 		<section>
-			<section className="h-screen flex flex-col justify-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#3D3D42] snap-start">
+			<section className="h-screen flex flex-col justify-center text-black snap-start">
 				<motion.h1
 					className="text-center text-4xl md:text-5xl text-white font-bold p-5 uppercase "
 					initial={{ y: "-100%", opacity: 0 }}
@@ -601,7 +633,7 @@ function Section16() {
 					</motion.article>
 				</div>
 			</section>
-			<section className="h-screen flex flex-col justify-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#3D3D42] snap-start">
+			<section className="h-screen flex flex-col justify-center text-black snap-start">
 				<motion.h1
 					className="text-center text-4xl md:text-5xl text-white font-bold p-5 uppercase "
 					initial={{ y: "-100%", opacity: 0 }}
@@ -649,7 +681,7 @@ function Section16() {
 
 function Section17() {
 	return (
-		<section className="h-screen flex flex-col justify-center bg-[url('/lesson3_imgs/s10-bg.png')] text-black bg-no-repeat bg-cover bg-center bg-[#7E6363] snap-start">
+		<section className="h-screen flex flex-col justify-center text-black snap-start">
 			<motion.h1
 				className="text-center text-4xl md:text-5xl text-white font-bold p-10 uppercase"
 				initial={{ y: "-100%", opacity: 0 }}
