@@ -14,11 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="bg-[#1e1e1e] text-gray-200"
-      >
-        <NavigationBar/>
-        {children}
+      <body className="bg-[#1e1e1e] text-gray-200 flex flex-col min-h-screen">
+        <NavigationBar />
+        <main className="flex-grow">{children}</main>
       </body>
     </html>
   );

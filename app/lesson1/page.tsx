@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Lesson1FirstCarousel from "@/components/lesson1/Lesson1FirstCarousel";
 import Lesson1SecondCarousel from "@/components/lesson1/Lesson1SecondCarousel";
+import Particles from "@/components/Particles";
 import { EmblaOptionsType } from "embla-carousel";
 import Image from "next/image";
 import { useState, useEffect, useRef } from 'react';
@@ -22,7 +23,7 @@ export default function Globalization() {
             <Section3 />
             <Section4 />
             <Section5 />
-       </div> 
+        </div>
     );
 }
 
@@ -37,6 +38,14 @@ function Section1() {
         <div
             className="bg-[#223030] min-h-screen flex flex-col items-center justify-center overflow-hidden relative"
         >
+            <Particles
+                className="absolute inset-0"
+                quantity={100}
+                ease={50}
+                color="#ffffff"
+                size={1.5}
+                refresh
+            />
             <motion.div
                 className="text-center font-bold font-fjalla uppercase"
                 style={{ opacity: h1Opacity }}
@@ -116,6 +125,14 @@ function Section3() {
             ref={section3Ref}
             className="relative h-screen bg-[#223030] flex items-center justify-center overflow-hidden gap-5"
         >
+            <Particles
+                className="absolute inset-0"
+                quantity={100}
+                ease={50}
+                color="#ffffff"
+                size={1.5}
+                refresh
+            />
             <motion.p
                 className="text-white text-2xl font-semibold lg:w-1/2"
                 style={{
@@ -158,6 +175,14 @@ function Section3() {
             ref={section3Ref}
             className="relative h-screen bg-[#223030] flex flex-col items-center justify-center overflow-hidden gap-5"
         >
+            <Particles
+                className="absolute inset-0"
+                quantity={100}
+                ease={50}
+                color="#ffffff"
+                size={1.5}
+                refresh
+            />
             <div className="h-[10px] bg-[#e8d9cd] w-80" />
             <Image
                 src="/lesson1_imgs/images3.png"
@@ -188,7 +213,7 @@ function Section3() {
 
 function Section4() {
     return (
-        <div className="bg-[#223030] flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen">
             <Lesson1FirstCarousel slides={SLIDES1} options={OPTIONS1} />
         </div>
 
@@ -306,7 +331,7 @@ const slidesContent = [
 
 function Section5() {
     return (
-        <div className="bg-[#223030] flex justify-center items-center h-screen">
+        <div className=" flex justify-center items-center h-screen">
             <Lesson1SecondCarousel slides={slidesContent} options={OPTIONS2} />
         </div>
     )
