@@ -2,12 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, Folder, Info } from "lucide-react";
+import { Home, Folder } from "lucide-react";
 
 const navItem = [
   { title: "Home", url: "/", icon: Home },
   { title: "Topics", url: "/topics", icon: Folder },
-  { title: "About", url: "/about", icon: Info },
 ];
 
 

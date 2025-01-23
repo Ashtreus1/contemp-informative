@@ -16,13 +16,13 @@ const SLIDES1 = Array.from(Array(SLIDE_COUNT1).keys());
 
 export default function Globalization() {
     return (
-        <>
+        <div className="overflow-x-hidden">
             <Section1 />
             <Section2 />
             <Section3 />
             <Section4 />
             <Section5 />
-       </> 
+       </div> 
     );
 }
 
