@@ -1,6 +1,5 @@
 "use client";
 import Section5 from "./Section5";
-import { BottomAnim, LeftAnim, RightAnim, TopAnim } from "@/components/anim/Animation";
 import { motion } from "framer-motion";
 
 export default function Lesson4Main() {

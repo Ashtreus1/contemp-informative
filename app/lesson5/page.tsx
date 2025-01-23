@@ -1,5 +1,4 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { LeftAnim, RightAnim } from "@/components/anim/Animation";
 
 export const textStyle = "w-full text-base md:text-lg lg:text-xl";
@@ -168,7 +167,7 @@ export default function Lesson5() {
 	);
 }
 
-export function Section({ children, className }: any) {
+export function Section({ children, className }: { children: React.ReactNode; className?: string }) {
 	return <section className={`${sectionContainerStyle} ${className} `}>{children}</section>;
 }
 
@@ -200,15 +199,15 @@ function SDGS() {
 	);
 }
 
-function Template1({ item, index }: any) {
+function Template1({ key, item, index }: { key: number; item: { title: string; article: string[]; bgcolor: string }; index: number }) {
 	return (
-		<Section className={``}>
+		<Section key={key}>
 			<LeftAnim values="50" className={`${imgContainerStyle} `} duration={duration}>
 				<img src={`/lesson5_imgs/s5-img-${index}.png`} alt={item.title} className={imgStyle} />
 			</LeftAnim>
 			<RightAnim values="50" className={`${articleStyle} ${item.bgcolor}`} duration={duration}>
 				<h1 className={`${titleStyle} `}>{item.title}</h1>
-				{item.article.map((i: any) => (
+				{item.article.map((i: string) => (
 					<p key={i} className={`${textStyle}`}>
 						{i}
 					</p>
@@ -218,12 +217,12 @@ function Template1({ item, index }: any) {
 	);
 }
 
-function Template2({ item, index }: any) {
+function Template2({ key, item, index }: { key: number; item: { title: string; article: string[]; bgcolor: string }; index: number }) {
 	return (
-		<Section className={`${item.color} flex-col-reverse`}>
+		<Section key={key} className={`flex-col-reverse`}>
 			<LeftAnim values="50" className={`${articleStyle} ${item.bgcolor}`} duration={duration}>
 				<h1 className={`${titleStyle}`}>{item.title}</h1>
-				{item.article.map((i: any) => (
+				{item.article.map((i: string) => (
 					<p key={i} className={`${textStyle} text-justify`}>
 						{i}
 					</p>

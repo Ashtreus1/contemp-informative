@@ -1,5 +1,5 @@
 "use client";
-import { BottomAnim, LeftAnim, RightAnim, TopAnim } from "@/components/anim/Animation";
+import { LeftAnim, RightAnim, TopAnim } from "@/components/anim/Animation";
 import { Img, Section, Temps, textStyle, titleStyle, imgStyle, center, imgSmallStyle, containerStyle } from "./components";
 
 export default function lesson4() {
@@ -24,7 +24,7 @@ function Section1() {
 		<Section className="sm:bg-[#D0D5CE] bg-[#D0D5CE] text-black sm:flex-col gap-10 sm:h-screen">
 			<TopAnim values="100" duration={1.2} className="w-full flex flex-col gap-5 items-center">
 				{/* <img src="/lesson4_imgs/s1-img.png" alt="MARKET INTEGRATION" className="w-full sm:w-3/4 lg:w-4/6 rounded-2xl" /> */}
-				<Img src="/lesson4_imgs/s1-img.png" alt="MARKET INTEGRATION" className="w-full sm:w-3/4 lg:w-4/6 rounded-2xl" />
+				<img src="/lesson4_imgs/s1-img.png" alt="MARKET INTEGRATION" className="w-full sm:w-3/4 lg:w-4/6 rounded-2xl" />
 				<div className="flex flex-col sm:flex-row gap-5 sm:gap-0">
 					<h1 className={`${titleStyle} ${center} text-2xl sm:text-4xl lg:text-5xl xl:text-6xl`}>MARKET INTEGRATION</h1>
 					<p className={`sm:w-1/2 sm:text-lg bg-[#FFFFFF] p-2 rounded-lg`}>
@@ -87,8 +87,8 @@ function Section4() {
 				/>
 				<h1 className={`${titleStyle} py-5`}>PERFECT COMPETITION</h1>
 				<p className={`text-[#24E1B5] p-2`}>
-					Occurs when all companies sell identical products, market share doesn't influence price, companies can enter or exit without
-					barriers, buyers have perfect or full information, and companies can't determine prices.
+					Occurs when all companies sell identical products, market share doesn&apos;t influence price, companies can enter or exit without
+					barriers, buyers have perfect or full information, and companies can&apos;t determine prices.
 				</p>
 			</TopAnim>
 		</Section>
@@ -233,7 +233,7 @@ function Section9() {
 	return (
 		<Section className={`sm:h-auto flex sm:flex-col gap-20 px-5 py-10`}>
 			<LeftAnim values="100" duration={1.6} className="flex flex-col gap-10">
-				<h1 className={`${center} ${titleStyle} font-normal`}>Tariffs has both Positive and Negative effects on a nation's economy</h1>
+				<h1 className={`${center} ${titleStyle} font-normal`}>Tariffs has both Positive and Negative effects on a nation&apos;s economy</h1>
 				<div className="flex flex-col sm:flex-row gap-10">
 					{DATA1.map((data, index) => (
 						<Content key={index} title={data.title} article={data.article} index={index + 1} />

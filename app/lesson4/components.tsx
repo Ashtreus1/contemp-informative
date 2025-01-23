@@ -8,7 +8,7 @@ export const imgStyle = "w-full sm:w-3/4 md:w-2/3 lg:w-2/3 xl:w-2/3 max-h-[200px
 export const imgSmallStyle = "w-[30%] sm:w-[20%] xl:w-[20%] rounded-2xl object-scale-down";
 export const center = "flex flex-col justify-center items-center";
 
-export function Section({ children, className }: any) {
+export function Section({ children, className }: { children: React.ReactNode; className?: string }) {
 	return (
 		<div
 			className={`bg-[#181C14] sm:bg-[#181C14] overflow-hidden w-full py-16 sm:py-0 flex flex-col sm:flex-row justify-center items-center px-2 sm:px-20 gap-10 ${textStyle} ${className} `}
@@ -18,7 +18,7 @@ export function Section({ children, className }: any) {
 	);
 }
 
-export function Img({ src, alt, cImgStyle, cContainerStyle }: any) {
+export function Img({ src, alt, cImgStyle, cContainerStyle }: { src: string; alt: string; cImgStyle?: string; cContainerStyle?: string }) {
 	return (
 		<div className={`${center} ${cContainerStyle}`}>
 			<img src={src} alt={alt} className={`${center} ${imgStyle} ${cImgStyle}`} />
@@ -26,7 +26,7 @@ export function Img({ src, alt, cImgStyle, cContainerStyle }: any) {
 	);
 }
 
-export function Temps({ title, article, src, tempNo }: any) {
+export function Temps({ title, article, src, tempNo }: { title: string; article: string; src: string; tempNo: number }) {
 	const imgStyle = "sm:w-4/5";
 	return tempNo == 1 ? (
 		<div className={`${center} flex sm:flex-row gap-10`}>
