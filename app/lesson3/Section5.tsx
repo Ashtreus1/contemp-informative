@@ -21,24 +21,27 @@ export default function Section5() {
 	];
 
 	return (
-		<section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col-reverse lg:flex-row items-center justify-center bg-no-repeat bg-cover bg-center snap-start sm:pt-20 bg-cyan-800">
+		<section className="relative items-center justify-center bg-no-repeat bg-cover bg-center snap-start sm:pt-20 pb-20 ">
+			<div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+			{/* <section className="h-screen bg-[url('/lesson3_imgs/bg-1.png')] flex flex-col-reverse lg:flex-row items-center justify-center bg-no-repeat bg-cover bg-center snap-start sm:pt-20 bg-cyan-800"> */}
 			<motion.h1
-				className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-white uppercase flex items-center justify-center sm:px-10 md:px-2"
+				className="text-center relative text-xl sm:text-2xl md:text-3xl font-bold text-white uppercase flex items-center justify-center sm:px-10 md:px-2"
 				initial={{ x: "-100%", opacity: 0 }}
 				whileInView={{ x: 0, opacity: 1 }}
 				exit={{ x: "-100%", opacity: 0 }}
-				transition={{ duration: 2 }}
+				transition={{ duration: 1.3 }}
 			>
 				GLOBALISASYON VS INTERNALISASYON
 			</motion.h1>
 			<motion.div
-				className=""
+				className="relative"
 				initial={{ x: "100%", opacity: 0 }}
 				whileInView={{ x: 0, opacity: 1 }}
 				exit={{ x: "100%", opacity: 0 }}
 				transition={{ duration: 2 }}
 			>
-				<div className="h-auto sm:h-3/5 lg:h-4/5 grid grid-cols-2 sm:flex sm:items-center sm:justify-center">
+				<div className="h-auto sm:h-3/5 lg:h-4/5 sm:flex sm:justify-center">
 					{cards.map((card) => (
 						<Section5Card key={card.title} articleImg={card.img} article={card.article} title={card.title} />
 					))}
@@ -48,14 +51,14 @@ export default function Section5() {
 	);
 
 	function Section5Card({ articleImg, article, title }: { articleImg: string; article: string; title: string }) {
-		const styleTitle = title === "Internationalization" ? "col-span-2" : "";
 		return (
-			<div className={`sm:h-full sm:w-1/3 items-center flex flex-col sm:space-y-4 p-2 ${styleTitle}`}>
+			<div className={`sm:h-full max-w-[400px] sm:w-1/3 items-center flex flex-col sm:space-y-4 p-2 `}>
 				<div className={`w-1/2 sm:w-2/3`}>
 					<img src={articleImg} alt={articleImg} />
 				</div>
 				{/* <article className="border border-white p-2 h-2/3 sm:h-1/3 lg:h-1/3 xl:h-3/4 w-full"> */}
-				<article className="border border-white p-2 h-2/3 sm:h-2/4 w-full">
+				{/* <article className="border border-white p-2 h-2/3 sm:h-2/4 w-full"> */}
+				<article className="border border-white p-2 h-2/3 max-h-[200px] sm:h-[200px] w-full">
 					{title !== "Internationalization" ? (
 						<h2 className="uppercase text-center text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">{title}</h2>
 					) : (

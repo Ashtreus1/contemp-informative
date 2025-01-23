@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import Section  from "./Section";
+import Section from "./Section";
 import { TextStyle, HeaderStyle, center } from "./constant";
 import { LeftAnim } from "@/components/anim/Animation";
 
@@ -142,20 +142,28 @@ function Territory({ setShowState }: { setShowState: (state: boolean) => void })
 			transition={{ duration: 1 }}
 			className="absolute top-0 left-0 right-0 bottom-0 w-full z-10"
 		>
-			<Section className={`bg-[url(/lesson2_imgs/s2-bg-2.png)] py-10 px-6 sm:px-20 ${customTextStyle}`}>
-				<div className="flex flex-col sm:gap-5">
-					<div className={containerStyle}>
-						<h1 className={`${customHeaderStyle}`}>Territory</h1>
-						<p>
-							{`
+			{/* <Section className={`bg-[url(/lesson2_imgs/s2-bg-2.png)] py-10 px-6 sm:px-20 ${customTextStyle}`}> */}
+			<Section className={`bg-slate-800 py-10 px-6 sm:px-20 ${customTextStyle}`}>
+				<div className="flex flex-col sm:flex-row gap-5">
+					<div className="">
+						<div className={containerStyle}>
+							<h1 className={`${customHeaderStyle}`}>Territory</h1>
+							<p>
+								{`
 							The defined geographical areha under the jurisdiction of the state. This includes land, water, and airspace, which are
 							critical for the state's security and resources.
 							`}
-						</p>
+							</p>
+						</div>
+						<div className={containerStyle}>
+							<h1 className={customHeaderStyle}>National Territory</h1>
+							<p>
+								Encompasses the total area over which a state exercises sovereign control, including its subsoil and maritime zones.
+							</p>
+						</div>
 					</div>
-					<div className={containerStyle}>
-						<h1 className={customHeaderStyle}>National Territory</h1>
-						<p>Encompasses the total area over which a state exercises sovereign control, including its subsoil and maritime zones.</p>
+					<div className="w-1/2 flex flex-col gap-5">
+						<img src="/lesson2_imgs/s2-img-territory.png" alt="Territory" />
 					</div>
 				</div>
 				<div className="w-full flex flex-col-reverse sm:flex-row justify-between gap-5">
@@ -209,12 +217,14 @@ function TerritoryAquiring({ setShowState }: { setShowState: (state: boolean) =>
 						<img src="/lesson2_imgs/s2-img3.png" alt="" />
 					</div>
 				</div>
-				<Button
-					className={`w-full sm:w-[10%] h-14 bg-gray-300 hover:bg-gray-400 text-black font-semibold ${BackButtonStyle}`}
-					onClick={() => setShowState(false)}
-				>
-					{"Back"}
-				</Button>
+				<div className="w-full flex gap-5">
+					<Button
+						className={`w-full place-self-start sm:w-[10%] h-14 bg-gray-300 hover:bg-gray-400 text-black font-semibold ${BackButtonStyle}`}
+						onClick={() => setShowState(false)}
+					>
+						{"Back"}
+					</Button>
+				</div>
 			</Section>
 		</motion.div>
 	);
@@ -248,7 +258,8 @@ function Government({ setShowState }: { setShowState: (state: boolean) => void }
 				</div>
 				<div className="w-full flex flex-col-reverse sm:flex-row justify-between gap-5">
 					<Button
-						className={`w-full sm:w-1/6 h-14 bg-gray-300 hover:bg-gray-400 text-black font-semibold ${BackButtonStyle}`}
+						// className={`w-full sm:w-1/6 h-14 bg-gray-300 hover:bg-gray-400 text-black font-semibold ${BackButtonStyle}`}
+						className={`${BackButtonStyle} w-full sm:w-1/6 bg-gray-300 hover:bg-gray-400 text-black font-semibold`}
 						onClick={() => setShowState(false)}
 					>
 						{"Back"}
@@ -291,7 +302,7 @@ function FormsOfGovernment({ setShowState }: { setShowState: (state: boolean) =>
 				</div>
 				<div className="w-full flex flex-col-reverse sm:flex-row justify-between mt-10 gap-5">
 					<Button
-						className={`w-full sm:w-1/6 h-14 bg-gray-300 hover:bg-gray-400 text-black font-semibold ${BackButtonStyle} place-self-start`}
+						className={`${BackButtonStyle} w-full sm:w-1/6 bg-gray-300 hover:bg-gray-400 text-black font-semibold`}
 						onClick={() => setShowState(false)}
 					>
 						{"Back"}
@@ -313,7 +324,7 @@ function Sovereignty({ setShowState }: { setShowState: (state: boolean) => void 
 			transition={{ duration: 1 }}
 			className="absolute top-0 left-0 right-0 bottom-0 w-full z-10"
 		>
-			<Section className="bg-[url(/lesson2_imgs/s2-bg-3.png)] py-10 px-6 sm:px-20 gap-5 relative">
+			<Section className="bg-slate-800 py-10 px-6 sm:px-20 gap-5 relative">
 				<div className="flex flex-col mb-10">
 					<h1 className={`${HeaderStyle} py-6`}>Sovereignty</h1>
 					<p>
