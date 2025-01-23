@@ -1,13 +1,13 @@
 "use client";
 import { LeftAnim, RightAnim } from "@/components/anim/Animation";
 
-export const textStyle = "w-full text-base md:text-lg lg:text-xl";
-export const titleStyle = "w-full font-fjalla font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl";
+const textStyle = "w-full text-base md:text-lg lg:text-xl";
+const titleStyle = "w-full font-fjalla font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl";
 const articleStyle = "w-full lg:w-1/2 flex flex-col justify-center px-10 lg:px-20 text-left font-mont gap-5 text-white p-4 xl:p-20";
 const imgContainerStyle = "w-full lg:w-1/2 flex justify-center items-center";
 const imgStyle = "w-4/6 sm:5/6";
 // const sectionContainerStyle = "h-screen flex items-center justify-center flex-col lg:flex-row gap-4 md:gap-8";
-const sectionContainerStyle = "h-screen flex items-center justify-center flex-col lg:flex-row gap-4 md:gap-8";
+const sectionContainerStyle = "h-max py-20 lg:py-0 lg:h-screen flex items-center justify-center flex-col lg:flex-row gap-4 md:gap-8";
 const duration = 1.2;
 
 const DATASEC1 = {
@@ -167,7 +167,7 @@ export default function Lesson5() {
 	);
 }
 
-export function Section({ children, className }: { children: React.ReactNode; className?: string }) {
+function Section({ children, className }: { children: React.ReactNode; className?: string }) {
 	return <section className={`${sectionContainerStyle} ${className} `}>{children}</section>;
 }
 
@@ -193,15 +193,23 @@ function SDGS() {
 	return (
 		<div className="py-20">
 			{DATA.map((item, index) =>
-				index % 2 === 0 ? <Template1 key={index} index={index + 2} item={item} /> : <Template2 key={index} index={index + 2} item={item} />
+				index % 2 === 0 ? (
+					<div key={index}>
+						<Template1 index={index + 2} item={item} />{" "}
+					</div>
+				) : (
+					<div key={index}>
+						<Template2 index={index + 2} item={item} />
+					</div>
+				)
 			)}
 		</div>
 	);
 }
 
-function Template1({ key, item, index }: { key: number; item: { title: string; article: string[]; bgcolor: string }; index: number }) {
+function Template1({ item, index }: { item: { title: string; article: string[]; bgcolor: string }; index: number }) {
 	return (
-		<Section key={key}>
+		<Section>
 			<LeftAnim values="50" className={`${imgContainerStyle} `} duration={duration}>
 				<img src={`/lesson5_imgs/s5-img-${index}.png`} alt={item.title} className={imgStyle} />
 			</LeftAnim>
@@ -217,13 +225,13 @@ function Template1({ key, item, index }: { key: number; item: { title: string; a
 	);
 }
 
-function Template2({ key, item, index }: { key: number; item: { title: string; article: string[]; bgcolor: string }; index: number }) {
+function Template2({ item, index }: { item: { title: string; article: string[]; bgcolor: string }; index: number }) {
 	return (
-		<Section key={key} className={`flex-col-reverse`}>
+		<Section className={`flex-col-reverse`}>
 			<LeftAnim values="50" className={`${articleStyle} ${item.bgcolor}`} duration={duration}>
 				<h1 className={`${titleStyle}`}>{item.title}</h1>
-				{item.article.map((i: string) => (
-					<p key={i} className={`${textStyle} text-justify`}>
+				{item.article.map((i: string, idx: number) => (
+					<p key={idx} className={`${textStyle} text-justify`}>
 						{i}
 					</p>
 				))}
