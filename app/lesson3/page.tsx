@@ -5,33 +5,34 @@ import { motion } from "framer-motion";
 export default function Lesson4Main() {
 	return (
 		<div
-			className="h-screen overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory 
+			// className="h-screen overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory
+			className="h-screen overflow-y-auto overflow-x-hidden scroll-smooth
 						[&::-webkit-scrollbar]:w-2
 						[&::-webkit-scrollbar-track]:bg-gray-600
 						[&::-webkit-scrollbar-thumb]:bg-gray-300"
 		>
-			<div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-				<Section1 />
-				<Section2 />
-				<Section3 />
-				<Section4 />
-				<Section5 />
-				<Section6 />
-				<Section7 />
-				<Section8 />
-				<Section9 />
-				<Section10 />
-				<Section11 />
-				<Section12 />
-				<Section13 />
-				<Section14 />
-				<Section15 />
-				<Section16 />
-				<Section17 />
-				{/* <div className="snap-start">
+			{/* <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory"> */}
+			<Section1 />
+			<Section2 />
+			<Section3 />
+			<Section4 />
+			<Section5 />
+			<Section6 />
+			<Section7 />
+			<Section8 />
+			<Section9 />
+			<Section10 />
+			<Section11 />
+			<Section12 />
+			<Section13 />
+			<Section14 />
+			<Section15 />
+			<Section16 />
+			<Section17 />
+			{/* <div className="snap-start">
 				<Footer />
 			</div> */}
-			</div>
+			{/* </div> */}
 		</div>
 	);
 }

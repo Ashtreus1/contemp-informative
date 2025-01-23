@@ -27,7 +27,7 @@ export default function Section5() {
 				initial={{ x: "-100%", opacity: 0 }}
 				whileInView={{ x: 0, opacity: 1 }}
 				exit={{ x: "-100%", opacity: 0 }}
-				transition={{ duration: 2 }}
+				transition={{ duration: 1.3 }}
 			>
 				GLOBALISASYON VS INTERNALISASYON
 			</motion.h1>
@@ -55,7 +55,8 @@ export default function Section5() {
 					<img src={articleImg} alt={articleImg} />
 				</div>
 				{/* <article className="border border-white p-2 h-2/3 sm:h-1/3 lg:h-1/3 xl:h-3/4 w-full"> */}
-				<article className="border border-white p-2 h-2/3 sm:h-2/4 w-full">
+				{/* <article className="border border-white p-2 h-2/3 sm:h-2/4 w-full"> */}
+				<article className="border border-white p-2 max-w-[500px] w-full">
 					{title !== "Internationalization" ? (
 						<h2 className="uppercase text-center text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">{title}</h2>
 					) : (

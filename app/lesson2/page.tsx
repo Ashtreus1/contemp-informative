@@ -1,13 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import Section from './Section';
+import Section from "./Section";
 import Section2 from "./Section2";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
 import { LeftAnim, RightAnim, TopAnim } from "@/components/anim/Animation";
-import { HeaderStyle, center } from "./constant";
-
+import { HeaderStyle, center, bgs } from "./constant";
 
 export default function Lesson2() {
 	return (
@@ -27,7 +26,6 @@ export default function Lesson2() {
 		</div>
 	);
 }
-
 
 function Section1() {
 	return (
@@ -78,7 +76,8 @@ function Section1() {
 function Section3() {
 	const container = "w-full md:w-1/2 sm:h-5/7 lg:h-[450px] p-10 rounded-3xl relative";
 	return (
-		<Section className="bg-[url(/lesson2_imgs/s3-bg.png)] relative py-20 gap-10 px-10 bg-contain bg-center flex flex-col sm:flex-row">
+		<Section className={`${bgs[2]} relative py-20 gap-10 px-10 bg-contain bg-center flex flex-col sm:flex-row`}>
+			{/* <Section className="bg-[url(/lesson2_imgs/s3-bg.png)] relative py-20 gap-10 px-10 bg-contain bg-center flex flex-col sm:flex-row"> */}
 			<div className="absolute inset-0 bg-black bg-opacity-50" />
 			<LeftAnim values="100" duration={1.2} className={`${container} bg-slate-800`}>
 				<h1 className={`p-5 rounded-3xl ${HeaderStyle}`}>State</h1>

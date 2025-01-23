@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import Section  from "./Section";
-import { TextStyle, HeaderStyle, center } from "./constant";
+import Section from "./Section";
+import { TextStyle, HeaderStyle, center, bgs } from "./constant";
 import { BottomAnim } from "@/components/anim/Animation";
 
 const BACKBUTTON = "w-full sm:w-1/6 h-10 sm:h-16 bg-gray-300 hover:bg-gray-400 text-black font-semibold";
@@ -18,9 +18,10 @@ export default function Section4() {
 	const buttonStyle = TextStyle + " text-black bg-gray-400 hover:bg-gray-300 font-semibold h-14 rounded-xl";
 
 	return (
-		<Section className="bg-[url(/lesson2_imgs/s4-bg-1.png)] relative">
+		<Section className={`${bgs[1]} relative`}>
+			{/* <Section className="bg-[url(/lesson2_imgs/s4-bg-1.png)] relative"> */}
 			<div className="absolute inset-0 bg-black bg-opacity-50" />
-			<BottomAnim values="100" duration={1.2} className="w-full h-full px-6 sm:px-20">
+			<BottomAnim values="50" duration={1.2} className="w-full h-full px-6 sm:px-20 ">
 				<div className={`h-4/6 flex flex-col items-center justify-center relative`}>
 					<h1 className={`${HeaderStyle} w-full`}>Sovereignty</h1>
 					<p className={`${center}`}>
